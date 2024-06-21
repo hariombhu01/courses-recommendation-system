@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* declaration of variables */
+:root {
+    --primary-font: "Roboto", sans-serif;
+    --secondary-font: "DM Serif Display", serif;
+    --text-color: #2d3f31;
+    --text-color-2: #6a6f73;
+    --edunavigator-color: #5624d0;
+    --dropdown-box-shadow: 0 0 0 1px #d1d7dc, 0 2px 4px rgba(0, 0, 0, .88), 0 4px 12px rgba(0, 0, 0, .88);
+}
+* reset default browser styles */
+html {
+    font-size: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+body {
+    background-color: rgba(108, 210, 240, 0.775);
+    font-family: var(--primary-font);
+    
+    
+    
+  background-size: cover; /* Cover the entire viewport */
+  background-attachment: fixed; /* Fix the background image */
+  /* Optionally, you can add more styles to adjust the background */
+}
+
+
+/* classes for docs */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    outline: none;
+    border: 1px solid black;
+    color: black;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin: 0 0.3rem;
+    min-width: 8rem;
+    height: 4rem;
+    background: transparent;
+border-radius: 33px;
+}
+
+.btn.reverse {
+    background: black;
+    color: white;
+
+}
+.btn.reverse {
+    background: black;
+    color: white;
+
+}
+
+.btn-icon {
+    min-width: auto;
+    padding: 0 2.4rem;
+
+}
+
+/* bold classes */
+.b-100 {
+    font-weight: 100 !important;
+}
+
+.b-200 {
+    font-weight: 200 !important;
+}
+
+.b-300 {
+    font-weight: 300 !important;
+}
+
+.b-400 {
+    font-weight: 400 !important;
+}
+
+.b-500 {
+    font-weight: 500 !important;
+}
+
+.b-600 {
+    font-weight: 600 !important;
+}
+
+.b-700 {
+    font-weight: 700 !important;
+}
+
+.s-color {
+    color: var(--text-color-2);
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background: #eee;
+}
+
+/* margins */
+.m-0 {
+    margin: 0 !important;
+    
+}
+.mt-1 {
+    margin-top: 1rem !important;
+}
+
+.mb-1 {
+    margin-bottom: 1rem !important;
+}
+
+.ml-1 {
+    margin-left: 1rem !important;
+}
+
+.mr-1 {
+    margin-right: 1rem !important;
+}
+
+.mt-2 {
+    margin-top: 2rem !important;
+}
+
+.mb-2 {
+    margin-bottom: 2rem !important;
+}
+
+.ml-2 {
+    margin-left: 2rem !important;
+}
+.mr-2 {
+    margin-right: 2rem !important;
+}
+
+.text-centre {
+    text-align: center;
+}
+
+
+/* standard fonts  */
+.lg-h-font {
+    font-family: var(--secondary-font);
+    font-size: 3rem;
+}
+
+.h-font {
+    font-family: var(--primary-font);
+    font-size: 1.9rem;
+    font-weight: 400;
+}
+
+.p-font {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: var(--primary-font);
+}
+.sm-font {
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: var(--primary-font);
+}
+
+/* styling main header */
+.logo img {
+    width: 91px;
+    height: 50px;
+}
+
+.main-header {
+    height: 7.2rem;
+    background: white;
+    box-shadow: 0 2px 4px #00000014, 0 4px 12px #00000014;
+    display: flex;
+    padding: 0 2.4rem;
+}
+
+.nav-header {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-header .search-form-container {
+    flex: 1;
+    background: transparent;
+    height: 4.8rem;
+    min-width: 18rem;
+    border: 1px solid black;
+    border-radius: 2.4rem;
+}
+
+.nav-header .search-form-container form {
+    display: flex;
+    flex-direction: row-reverse;
+    height: inherit;
+    overflow: hidden;
+}
+
+.nav-header .search-form-container form input {
+    flex: 1;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.nav-header .search-form-container form button {
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 0 1.5rem;
+}
+
+.nav-header .nav-item {
+    margin: 0 1rem;
+    cursor: pointer;
+    
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+/* styling dropdown */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    padding: 3rem 0;
+    z-index: 1;
+    display: none;
+}
+
+.dropdown-list {
+    background: white;
+    box-shadow: var(--dropdown-box-shadow);
+    border: 1px solid #eee;
+}
+
+.dropdown-list li a {
+    display: block;
+    padding: 1rem 2rem;
+    min-width: 25rem;
+    letter-spacing: 0.5px;
+    color: var(--text-color);
+}
+.dropdown-list li a:hover {
+    color: var(--edunavigator-color);
+}
+
+.nav-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content.left {
+    left: -2rem;
+}
+
+/* styling panel 2 */
+.dropdown-panel {
+    background: white;
+    min-width: 30rem;
+    padding: 2rem;
+    box-shadow: var(--dropdown-box-shadow);
+}
+
+.dropdown-content.right {
+    right: 0;
+}
+
+/* responsive bana raha hu bhai */
+@media screen and (max-width: 1096px) {
+    .nav-right li:nth-of-type(1) {
+        display: none;
+    }
+}
+
+@media screen and (max-width:920px) {
+    .nav-right li:nth-of-type(2) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .nav-right li:nth-of-type(4),
+    .nav-right li:nth-of-type(5),
+    .nav-right li:nth-of-type(5),
+    .nav-right li:nth-of-type(6),
+    .categories {
+        display: none;
+    }
+
+    .nav-header .search-form-container {
+        flex: initial;
+        border-radius: none;
+        min-width: auto;
+        border: none;
+    }
+
+    .nav-header .search-form-container form input {
+        display: none;
+    }
+    .logo {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-header .logo img {
+        width: 75px;
+    }
+
+    .nav-header .search-form-container form button {
+        padding: 0;
+    }
+
+    .side-menu-opener {
+        display: block;
+    }
+
+}
+
+.side-menu-opener {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    padding: 0 1rem;
+    /* display: none; */
+}
+.side-menu-opener.hide {
+    visibility: hidden;
+}
+
+/* side menu bar */
+.side-menu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background: rgb(0, 0, 0, 0.5);
+    z-index: 1;
+    left: -100%;
+    transition: left .5s;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.side-menu-bar {
+    background: white;
+    width: 30rem;
+    height: 100%;
+    position: relative;
+}
+.side-menu-bar ul li a {
+    display: block;
+    padding: 1rem 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.side-menu-bar ul:nth-of-type(1) li a {
+    color: var(--edunavigator-color);
+}
+
+.side-menu-bar .close-btn {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    right: -5rem;
+    top: 1rem;
+    cursor: pointer;
+}
+
+/* styling banner */
+.banner-img{
+    min-width: 1000px;
+    position: relative;
+    right: -900px;
+    margin: 0 auto;
+    margin-bottom: 4.8rem;
+}
+
+.hero .hero-quote{
+    position: absolute;
+    left: 15.2rem;
+    top: 15.4rem;
+    padding: 3.4rem;
+    background: white;
+    box-shadow: var(--dropdown-box-shadow);
+    max-width: 44rem;
+    color: var(--text-color);
+}
+@media  screen and (max-width: 1340px ) {
+    .hero{
+        max-width: 50%;
+        padding-left: 50%;
+        
+    }
+    .hero .hero-quote{
+        width: 40rem;
+        left: 4.8rem;
+        top: 2.4rem;
+
+    }
+    
+}
+/* syling college logos */
+
+
+.trusted-br{
+    max-width: 134rem;
+    margin: 0 auto;
+    padding: 1.4rem;
+}
+.trusted-br .colleges{
+    display: flex;
+    justify-content: center; 
+    flex-wrap :wrap;
+}
+.trusted-br .colleges .cl-img{
+    width: 15rem;
+    size: 10px;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+} 
+.iitp{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -80px;
+    font-size: 40px;
+}
+.iitb{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -80px;
+    font-size: 40px;
+}
+.iitkanpur{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -80px;
+    font-size: 40px;
+}
+.iitdelhi{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -80px;
+    font-size: 40px;
+}
+.iitg{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -80px;
+    font-size: 40px;
+}
+.iitk{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -80px;
+    font-size: 40px;
+}
+.iitr{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -80px;
+    font-size: 40px;
+}
+.iitroor{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -80px;
+    font-size: 40px;
+}
+.a .para{
+    position: centre;
+    left: 50.2rem;
+    top: -52.4rem;
+    padding: 3.4rem;
+    background: rgb(94, 203, 250);
+    box-shadow: var(--dropdown-box-shadow);
+    max-width: 150rem;
+    max-height: 150rem;
+    color: var(--text-color);
+}
+
+.student-img{
+    display: flex;
+    justify-content: center;
+    right: -1300px;
+    position: relative;
+    top: -1300px;
+    width: 500px;
+    
+}
+ 
+
+.second-banner{
+    display: flex;
+    justify-content: center;
+    right: -720px;
+    position: relative;
+    top: -500px;
+    width: 500px;
+}
+.btn-reverse{
+    padding: 2 2px;
+}
+.footer-container{
+    position: centre;
+    left: 20.01rem;
+    top: -40.4rem;
+    padding: 3.2rem;
+    background: rgb(144, 218, 233);
+    box-shadow: var(--dropdown-box-shadow);
+    max-width: 150rem;
+    max-height: 50rem;
+    color: var(--text-color);
+    font-size: 20px;
+}
